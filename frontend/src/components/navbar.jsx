@@ -110,6 +110,7 @@ export default function Navbar() {
                                                 currentUserNavigation.map(
                                                     (el) => (
                                                         <Link
+                                                            key={el.name}
                                                             to={el.to}
                                                             className='block px-4 py-2 text-sm text-gray-700'
                                                         >

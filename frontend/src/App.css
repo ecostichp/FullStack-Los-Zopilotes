@@ -1,18 +1,18 @@
 .mi_contenedor {
     @apply flex;
-    @apply justify-center items-center;
+    @apply justify-center;
     height: 90vh;
 }
 
-.mi_contenedor h1 {
+.mi_titulo {
     @apply text-5xl font-bold;
-}
-
-.mi_contenedor p {
-    @apply mt-2;
 }
 
 .usuario {
     @apply font-medium;
     color: steelblue;
+}
+
+.dashboardImg {
+    max-height: 500px;
 }

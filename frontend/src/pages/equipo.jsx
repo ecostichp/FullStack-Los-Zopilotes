@@ -6,8 +6,8 @@ export default function Equipo() {
     return (
         <>
             <div className="mi_contenedor">
-                <div className="text-center">
-                    <h1>Soy el Equipo</h1>
+                <div>
+                    <h1 className="mi_titulo text-center">Mi equipo</h1>
                     <ListaEquipo />
                 </div>
             </div>
