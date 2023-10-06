@@ -21,7 +21,7 @@ export default function ListaEquipo() {
     return (
 
         <div>
-            <ul role="list" className="divide-y divide-gray-100">
+            <ul role="list" className="divide-y divide-gray-200">
 
 
                 {equipo.map((el) => (
@@ -30,13 +30,12 @@ export default function ListaEquipo() {
                             <li key={el.usuario} className="flex justify-between gap-x-6 py-5">
                                 <div className="grow">
                                     <div className=" flex justify-between rounded-b-md py-1 px-2">
-
-                                        <div className=" flex min-w-0 gap-x-4 items-center">
+                                        <div className=" flex gap-x-4 items-center">
                                             <img className="h-16 w-16 flex-none rounded-full bg-gray-50" src={findMyAvatar(el)} alt="Foto del avatar del usuario" />
                                             <div className="min-w-0 flex-auto">
                                                 <p className="font-semibold text-gray-900">@{el.usuario}</p>
-                                                <p className="mt-1 truncate text-xs leading-5 text-gray-500">{el.nombre_1ro} {el.nombre_2do} {el.apellido_paterno} {el.apellido_materno}</p>
-                                                <p className="mt-1 truncate text-xs leading-5 text-gray-500">Puesto</p>
+                                                <p className="mt-1 text-xs leading-5 text-gray-500">{el.nombre_1ro} {el.nombre_2do} {el.apellido_paterno} {el.apellido_materno}</p>
+                                                <p className="mt-1 text-xs leading-5 text-gray-500">Puesto</p>
                                             </div>
                                         </div>
                                         <div>
