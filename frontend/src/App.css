@@ -1,11 +1,17 @@
-.mi_contenedor {
-    @apply flex;
-    @apply justify-center;
-    height: 90vh;
-}
-
 .mi_titulo {
     @apply text-5xl font-bold;
+}
+
+.sidebutton {
+    border: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(68, 75, 99);
+    font-size: larger;
+    font-weight: 600;
+    padding: 5px;
+    width: 10rem;
+    text-align: center;
 }
 
 .usuario {
@@ -13,6 +19,119 @@
     color: steelblue;
 }
 
-.dashboardImg {
-    max-height: 500px;
+.grid_mainlayout {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 0fr 1fr;
+    grid-template-columns: 240px 1fr;
+    grid-template-areas:
+        "navbar navbar"
+        "sidebar outlet";
 }
+
+#mi_navbar {
+    grid-area: navbar;
+}
+
+#mi_sidebar {
+    grid-area: sidebar;
+}
+
+#mi_outlet {
+    grid-area: outlet;
+}
+
+@media only screen and (max-width: 640px) {
+    .grid_mainlayout {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 0fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "navbar"
+            "outlet";
+    }
+
+    #mi_sidebar {
+        display: none;
+    }
+}
+
+
+.grid_dashboard {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "content1 content1 content1 content2 content2 content2 content3 content3 content3 content4 content4 content4"
+        "content1 content1 content1 content2 content2 content2 content3 content3 content3 content4 content4 content4"
+        "content5 content5 content5 content5 content5 content5 content5 content6 content6 content6 content6 content6"
+        "content5 content5 content5 content5 content5 content5 content5 content6 content6 content6 content6 content6"
+        "content5 content5 content5 content5 content5 content5 content5 content6 content6 content6 content6 content6"
+        "content5 content5 content5 content5 content5 content5 content5 content6 content6 content6 content6 content6"
+        "content7 content7 content7 content7 content7 content7 content8 content8 content8 content8 content8 content8"
+        "content7 content7 content7 content7 content7 content7 content8 content8 content8 content8 content8 content8"
+        "content7 content7 content7 content7 content7 content7 content8 content8 content8 content8 content8 content8"
+        "content7 content7 content7 content7 content7 content7 content8 content8 content8 content8 content8 content8"
+        "content7 content7 content7 content7 content7 content7 content8 content8 content8 content8 content8 content8"
+        "content7 content7 content7 content7 content7 content7 content8 content8 content8 content8 content8 content8";
+    grid-gap: 0.6rem;
+}
+
+.cuadrito_dashboard {
+    display: flex;
+    @apply rounded-sm;
+    @apply bg-slate-400;
+    justify-content: center;
+    align-items: center;
+    @apply text-slate-700;
+}
+
+#content1 {
+    grid-area: content1;
+}
+
+#content2 {
+    grid-area: content2;
+}
+
+#content3 {
+    grid-area: content3;
+}
+
+#content4 {
+    grid-area: content4;
+}
+
+#content5 {
+    grid-area: content5;
+}
+
+#content6 {
+    grid-area: content6;
+}
+
+#content7 {
+    grid-area: content7;
+}
+
+#content8 {
+    grid-area: content8;
+}
+
+/* @media only screen and (max-width: 640px) {
+    .grid_mainlayout {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 0fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "navbar"
+            "outlet";
+    }
+
+    #mi_sidebar {
+        display: none;
+    }
+} */
